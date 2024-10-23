@@ -7,3 +7,17 @@ const image = document.querySelector("img"),
 button.addEventListener("click", () => {
     image.src = `${api}${api2}${input.value}`
 });
+
+// Render Hasilnya
+  outputImg.src = canvas.toDataURL();
+  outputImg.style.display = "block";
+  downloadButton.style.display = "inline-block";
+}
+
+downloadButton.addEventListener("click", () => {
+  const outputImg = document.getElementById("generatedImage");
+  const link = document.createElement("a");
+  link.href = outputImg.src;
+  link.download = "follow_ig_@ughbmm.png";
+  link.click();
+});
