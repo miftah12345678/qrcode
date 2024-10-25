@@ -3,29 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link dan Image to QR Code</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.0/qrious.min.js"></script>
+    <title>Image to URL Converter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Link dan Image to QR Code</h1>
-        
-        <div class="input-section">
-            <h2>Generate QR Code dari Link</h2>
-            <input type="text" id="linkInput" placeholder="Masukkan link di sini">
-            <button id="generateLinkQR">Generate QR Code</button>
-            <canvas id="linkQRCode"></canvas>
-        </div>
-
-        <div class="input-section">
-            <h2>Generate QR Code dari Gambar</h2>
-            <input type="file" id="imageInput" accept="image/*">
-            <button id="generateImageQR">Generate QR Code</button>
-            <canvas id="imageQRCode"></canvas>
-        </div>
+        <h1>Image to URL Converter</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <button id="uploadButton">Upload and Get URL</button>
+        <div id="result"></div>
+        <button id="sendToTelegram" style="display:none;">Send to Telegram via Telgra.ph</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
