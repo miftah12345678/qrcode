@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-
+    <title>Link dan Image to QR Code</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.0/qrious.min.js"></script>
 </head>
 <body>
-    <div class="qr-code-generator">
-        <div class="qr-code-box">
-            <img src="" alt="">
+    <div class="container">
+        <h1>Link dan Image to QR Code</h1>
+        
+        <div class="input-section">
+            <h2>Generate QR Code dari Link</h2>
+            <input type="text" id="linkInput" placeholder="Masukkan link di sini">
+            <button id="generateLinkQR">Generate QR Code</button>
+            <canvas id="linkQRCode"></canvas>
         </div>
-        <input type="text">
-        <button>Generate</button>
+
+        <div class="input-section">
+            <h2>Generate QR Code dari Gambar</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="generateImageQR">Generate QR Code</button>
+            <canvas id="imageQRCode"></canvas>
+        </div>
     </div>
-  </div>
-          <button id="downloadButton"
-            class="w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2"
-            style="display: none;">Download</button>
-  </div>
+
     <script src="script.js"></script>
 </body>
 </html>
